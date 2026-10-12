@@ -56,7 +56,7 @@ Si les accents s'affichent mal sous Windows, ajouter `-Dfile.encoding=UTF-8` aux
 | `NullPointerException` à la lecture | `config.txt` a une ligne vide ou moins de 2 lignes |
 | `NoSuchMethodException` | Le setter `setDao` est absent ou n'a pas le bon type |
 
-## À retenir
+## l'éxecution
 
 <img width="1128" height="265" alt="Capture d&#39;écran 2026-10-12 101024" src="https://github.com/user-attachments/assets/9606a678-c215-4ee4-851d-3bba878e6405" />
 
