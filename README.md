@@ -8,23 +8,6 @@ C'est exactement ce que font Spring ou CDI en coulisses, mais ici en version min
 
 Le code métier ne connaît que des **interfaces** (`IDao`, `IMetier`). Quelles classes concrètes utiliser ? C'est écrit dans `config.txt`. Si demain on veut changer d'implémentation, on modifie une ligne du fichier, sans toucher au code.
 
-## Les fichiers
-
-```
-reflexion-lab/
-├── pom.xml
-├── config.txt                      <- les noms des classes à charger
-└── src/main/java/
-    ├── dao/
-    │   ├── IDao.java               <- contrat : getValue()
-    │   └── DaoImpl.java            <- renvoie 100.0
-    ├── metier/
-    │   ├── IMetier.java            <- contrat : calcul()
-    │   └── MetierImpl.java         <- prend la valeur du DAO et la multiplie par 2
-    └── presentation/
-        └── Presentation2.java      <- le "conteneur" qui fait tout le travail
-```
-
 ## Ce que fait `Presentation2`
 
 1. Lit `config.txt` : une classe par ligne (`dao.DaoImpl`, puis `metier.MetierImpl`).
